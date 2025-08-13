@@ -12,13 +12,13 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+1 (555) 123-4567", "Toll-free: 1-800-DIPLOMA"],
+    details: ["+880 123-4567", "Toll-free: 1-800-DIPLOMA"],
     hours: "Mon-Fri: 8:00 AM - 6:00 PM, Sat: 9:00 AM - 2:00 PM",
   },
   {
     icon: Mail,
     title: "Email",
-    details: ["info@diplomaacademy.edu", "admissions@diplomaacademy.edu"],
+    details: ["info@wii.edu", "admissions@wii.edu"],
     hours: "Response within 24 hours",
   },
   {
@@ -36,13 +36,13 @@ const contactInfo = [
 ]
 
 const departments = [
-  { name: "General Information", email: "info@diplomaacademy.edu" },
-  { name: "Admissions", email: "admissions@diplomaacademy.edu" },
-  { name: "Academic Affairs", email: "academic@diplomaacademy.edu" },
-  { name: "Student Services", email: "students@diplomaacademy.edu" },
-  { name: "Financial Aid", email: "financial@diplomaacademy.edu" },
-  { name: "Career Services", email: "careers@diplomaacademy.edu" },
-  { name: "IT Support", email: "support@diplomaacademy.edu" },
+  { name: "General Information", email: "info@wii.edu" },
+  { name: "Admissions", email: "admissions@wii.edu" },
+  { name: "Academic Affairs", email: "academic@wii.edu" },
+  { name: "Student Services", email: "students@wii.edu" },
+  { name: "Financial Aid", email: "financial@wii.edu" },
+  { name: "Career Services", email: "careers@wii.edu" },
+  { name: "IT Support", email: "support@wii.edu" },
 ]
 
 export default function ContactPage() {
@@ -169,7 +169,7 @@ export default function ContactPage() {
                       <div className="text-center text-muted-foreground">
                         <MapPin className="h-12 w-12 mx-auto mb-2" />
                         <p>Interactive Map</p>
-                        <p className="text-sm">123 Education Street, Academic City, AC 12345</p>
+                        <p className="text-sm">Rupshi Bus Stand, Rupganj, Narayanganj</p>
                       </div>
                     </div>
                     <div className="space-y-2 text-sm text-muted-foreground">
@@ -192,11 +192,11 @@ export default function ContactPage() {
                     {[
                       {
                         title: "Admissions Office",
-                        phone: "+1 (555) 123-4581",
-                        email: "admissions@diplomaacademy.edu",
+                        phone: "+880 123-4581",
+                        email: "admissions@wii.edu",
                       },
-                      { title: "Student Services", phone: "+1 (555) 123-4584", email: "students@diplomaacademy.edu" },
-                      { title: "Financial Aid", phone: "+1 (555) 123-4582", email: "financial@diplomaacademy.edu" },
+                      { title: "Student Services", phone: "+880 123-4584", email: "students@wii.edu" },
+                      { title: "Financial Aid", phone: "+880 123-4582", email: "financial@wii.edu" },
                     ].map((contact, index) => (
                       <div key={index} className="border-l-4 border-primary pl-4">
                         <h4 className="font-medium">{contact.title}</h4>
@@ -252,7 +252,7 @@ export default function ContactPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <div className="flex items-center gap-2">
                   <Phone className="h-5 w-5" />
-                  <span className="text-lg font-medium">Campus Security: +1 (555) 123-HELP</span>
+                  <span className="text-lg font-medium">Campus Security: +880 123-HELP</span>
                 </div>
                 <div className="text-primary-foreground/80">Available 24/7</div>
               </div>

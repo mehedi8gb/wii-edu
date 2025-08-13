@@ -176,7 +176,7 @@ export default function AdmissionsPage() {
                       value={formData.phone}
                       onChange={(e) => handleInputChange("phone", e.target.value)}
                       className="mt-1"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+880 123-4567"
                     />
                   </div>
 

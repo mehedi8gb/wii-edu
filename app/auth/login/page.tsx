@@ -49,7 +49,7 @@ export default function LoginPage() {
       JSON.stringify({
         email: formData.email,
         role: formData.role,
-        name: formData.role === "admin" ? "John Admin" : formData.role === "teacher" ? "Sarah Teacher" : "Mike Student",
+        name: formData.role === "admin" ? "Saiful Admin" : formData.role === "teacher" ? "Sarah Teacher" : "Mike Student",
       }),
     )
 

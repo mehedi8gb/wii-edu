@@ -13,21 +13,8 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, GraduationCap } from "lucide-react"
+import {departments} from "@/data/departments";
 
-const departments = [
-  { name: "Civil Engineering", href: "/departments/civil-engineering" },
-  { name: "Surveying", href: "/departments/surveying" },
-  { name: "Electrical Engineering", href: "/departments/electrical-engineering" },
-  { name: "Shipbuilding Technology", href: "/departments/shipbuilding-technology" },
-  { name: "Marine Engineering", href: "/departments/marine-engineering" },
-  { name: "Glass & Ceramics Technology", href: "/departments/glass-ceramics-technology" },
-  { name: "Textile Engineering", href: "/departments/textile-engineering" },
-  { name: "Garments Design & Pattern Making", href: "/departments/garments-design-pattern-making" },
-  { name: "Electronics", href: "/departments/electronics" },
-  { name: "Mechanical", href: "/departments/mechanical" },
-  { name: "Architecture", href: "/departments/architecture" },
-  { name: "Aircraft Maintenance Engineering", href: "/departments/aircraft-maintenance-engineering" },
-]
 
 const booksData = {
   "Civil Engineering": ["Structural Analysis", "Construction Materials", "Surveying & Leveling"],
@@ -70,83 +57,60 @@ export function Header() {
                 </Link>
               </NavigationMenuItem>
 
+                {/*<NavigationMenuItem>*/}
+                {/*    <NavigationMenuTrigger>Academic</NavigationMenuTrigger>*/}
+                {/*    <NavigationMenuContent className="bg-white dark:bg-gray-900 rounded-lg shadow-lg">*/}
+                {/*        <div className="grid w-[500px] gap-3 p-4 md:w-[600px] md:grid-cols-2 lg:w-[700px]">*/}
+                {/*            {departments.map((dept) => (*/}
+                {/*                <Link*/}
+                {/*                    key={dept.name}*/}
+                {/*                    href={dept.href}*/}
+                {/*                    className="block text-gray-900 dark:text-gray-100 select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"*/}
+                {/*                >*/}
+                {/*                    <div className="text-sm font-medium leading-none">{dept.name}</div>*/}
+                {/*                </Link>*/}
+                {/*            ))}*/}
+                {/*        </div>*/}
+                {/*    </NavigationMenuContent>*/}
+                {/*</NavigationMenuItem>*/}
+
+
+                <NavigationMenuItem>
+                    <Link href="/departments" legacyBehavior passHref>
+                        <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                            Departments
+                        </NavigationMenuLink>
+                    </Link>
+                </NavigationMenuItem>
+
               <NavigationMenuItem>
-                <Link href="/users" legacyBehavior passHref>
+                <Link href="/teachers" legacyBehavior passHref>
                   <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                    Users
+                    Our Teachers
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                    <Link href="/students" legacyBehavior passHref>
+                        <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                            Students
+                        </NavigationMenuLink>
+                    </Link>
+                </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="/about" legacyBehavior passHref>
+                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                    About
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="/alumni" legacyBehavior passHref>
+                <Link href="/contact" legacyBehavior passHref>
                   <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                    Alumni
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Academic</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="grid w-[500px] gap-3 p-4 md:w-[600px] md:grid-cols-2 lg:w-[700px]">
-                    {departments.map((dept) => (
-                      <Link
-                        key={dept.name}
-                        href={dept.href}
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none">{dept.name}</div>
-                      </Link>
-                    ))}
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <Link href="/live-class" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                    Live Class
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <Link href="/examination" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                    Examination
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <Link href="/accounting" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                    Accounting
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <Link href="/back-office" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                    Back Office
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <Link href="/online-courses" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                    Online Courses
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <Link href="/settings" legacyBehavior passHref>
-                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                    Settings
+                    Contact
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>

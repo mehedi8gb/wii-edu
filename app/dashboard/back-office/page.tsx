@@ -103,7 +103,7 @@ export default function BackOfficePage() {
       },
       {
         id: "3",
-        title: "Faculty Employment Contract Template",
+        title: "Teacher Employment Contract Template",
         type: "contract",
         department: "HR",
         uploadDate: "2025-01-05",

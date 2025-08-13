@@ -165,11 +165,11 @@ export default function EducationPage() {
                   <CardContent className="space-y-4">
                     <div className="flex items-center gap-3">
                       <Mail className="h-4 w-4 text-accent" />
-                      <span className="text-sm">education@diplomaacademy.edu</span>
+                      <span className="text-sm">education@wii.edu</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Phone className="h-4 w-4 text-accent" />
-                      <span className="text-sm">+1 (555) 123-4572</span>
+                      <span className="text-sm">+880 123-4572</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <MapPin className="h-4 w-4 text-accent" />

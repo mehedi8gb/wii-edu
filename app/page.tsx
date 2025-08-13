@@ -5,6 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { Users, BookOpen, Award, Calendar, Star, TrendingUp, Clock, CheckCircle } from "lucide-react"
+import {departments} from "@/data/departments";
+import {teachers} from "@/data/teachers";
 
 export default function HomePage() {
   return (
@@ -57,7 +59,7 @@ export default function HomePage() {
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-primary mb-2">150+</div>
-                <div className="text-muted-foreground">Expert Faculty</div>
+                <div className="text-muted-foreground">Expert Teacher</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-primary mb-2">25+</div>
@@ -81,50 +83,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "Computer Science",
-                  description: "Cutting-edge technology and programming skills for the digital age",
-                  students: "450+ Students",
-                  icon: "💻",
-                  href: "/departments/computer-science",
-                },
-                {
-                  name: "Business Administration",
-                  description: "Leadership and management skills for modern business environments",
-                  students: "380+ Students",
-                  icon: "📊",
-                  href: "/departments/business-administration",
-                },
-                {
-                  name: "Healthcare",
-                  description: "Comprehensive medical training for healthcare professionals",
-                  students: "320+ Students",
-                  icon: "🏥",
-                  href: "/departments/healthcare",
-                },
-                {
-                  name: "Engineering",
-                  description: "Innovative engineering solutions for tomorrow's challenges",
-                  students: "290+ Students",
-                  icon: "⚙️",
-                  href: "/departments/engineering",
-                },
-                {
-                  name: "Arts & Design",
-                  description: "Creative expression through digital and traditional media",
-                  students: "220+ Students",
-                  icon: "🎨",
-                  href: "/departments/arts-design",
-                },
-                {
-                  name: "Education",
-                  description: "Preparing the next generation of educators and leaders",
-                  students: "180+ Students",
-                  icon: "📚",
-                  href: "/departments/education",
-                },
-              ].map((dept) => (
+              {departments.map((dept) => (
                 <Card
                   key={dept.name}
                   className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
@@ -154,38 +113,13 @@ export default function HomePage() {
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-4">Meet Our Faculty</h2>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-4">Meet Our Teacher</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Learn from industry experts and experienced educators
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  name: "Dr. Sarah Johnson",
-                  title: "Head of Computer Science",
-                  image: "/professional-woman-teacher.png",
-                  experience: "15+ Years Experience",
-                },
-                {
-                  name: "Prof. Michael Chen",
-                  title: "Business Administration",
-                  image: "/professional-man-teacher.png",
-                  experience: "12+ Years Experience",
-                },
-                {
-                  name: "Dr. Emily Rodriguez",
-                  title: "Healthcare Department",
-                  image: "/professional-woman-doctor.png",
-                  experience: "18+ Years Experience",
-                },
-                {
-                  name: "Prof. David Kim",
-                  title: "Engineering Faculty",
-                  image: "/professional-engineer.png",
-                  experience: "20+ Years Experience",
-                },
-              ].map((teacher) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {teachers.map((teacher) => (
                 <Card key={teacher.name} className="text-center group hover:shadow-lg transition-all duration-300">
                   <CardContent className="pt-6">
                     <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
@@ -204,7 +138,7 @@ export default function HomePage() {
             </div>
             <div className="text-center mt-12">
               <Button asChild variant="outline" size="lg">
-                <Link href="/teachers">View All Faculty</Link>
+                <Link href="/teachers">View All Teacher</Link>
               </Button>
             </div>
           </div>
@@ -353,7 +287,7 @@ export default function HomePage() {
                   <div className="bg-accent text-accent-foreground w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="h-8 w-8" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">Meet Faculty</h3>
+                  <h3 className="font-semibold text-lg mb-2">Meet Teacher</h3>
                   <p className="text-primary-foreground/80 mb-4">Connect with our experienced teachers and mentors</p>
                   <Button
                     asChild

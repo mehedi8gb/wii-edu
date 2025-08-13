@@ -12,8 +12,8 @@ const staff = [
     title: "Registrar",
     department: "Academic Affairs",
     image: "/staff-registrar.png",
-    email: "j.adams@diplomaacademy.edu",
-    phone: "+1 (555) 123-4580",
+    email: "j.adams@wii.edu",
+    phone: "+880 123-4580",
     office: "Administration Building, Room 101",
     hours: "Mon-Fri: 8:00 AM - 5:00 PM",
     responsibilities: "Student records, enrollment, transcripts, graduation requirements",
@@ -24,8 +24,8 @@ const staff = [
     title: "Director of Admissions",
     department: "Admissions",
     image: "/staff-admissions.png",
-    email: "m.stevens@diplomaacademy.edu",
-    phone: "+1 (555) 123-4581",
+    email: "m.stevens@wii.edu",
+    phone: "+880 123-4581",
     office: "Admissions Office, Room 205",
     hours: "Mon-Fri: 8:30 AM - 6:00 PM, Sat: 9:00 AM - 2:00 PM",
     responsibilities: "Application processing, student recruitment, admission decisions, orientation programs",
@@ -36,8 +36,8 @@ const staff = [
     title: "Financial Aid Coordinator",
     department: "Financial Services",
     image: "/staff-financial-aid.png",
-    email: "p.wong@diplomaacademy.edu",
-    phone: "+1 (555) 123-4582",
+    email: "p.wong@wii.edu",
+    phone: "+880 123-4582",
     office: "Financial Aid Office, Room 150",
     hours: "Mon-Fri: 9:00 AM - 5:00 PM",
     responsibilities: "Student financial aid, scholarships, payment plans, financial counseling",
@@ -48,8 +48,8 @@ const staff = [
     title: "IT Support Manager",
     department: "Information Technology",
     image: "/staff-it-manager.png",
-    email: "c.martinez@diplomaacademy.edu",
-    phone: "+1 (555) 123-4583",
+    email: "c.martinez@wii.edu",
+    phone: "+880 123-4583",
     office: "IT Department, Room 301",
     hours: "Mon-Fri: 7:30 AM - 6:00 PM",
     responsibilities: "Network administration, technical support, system maintenance, software licensing",
@@ -60,8 +60,8 @@ const staff = [
     title: "Student Services Director",
     department: "Student Affairs",
     image: "/staff-student-services.png",
-    email: "a.foster@diplomaacademy.edu",
-    phone: "+1 (555) 123-4584",
+    email: "a.foster@wii.edu",
+    phone: "+880 123-4584",
     office: "Student Services, Room 220",
     hours: "Mon-Fri: 8:00 AM - 5:30 PM",
     responsibilities: "Student counseling, career services, student activities, wellness programs",
@@ -72,8 +72,8 @@ const staff = [
     title: "Library Director",
     department: "Academic Support",
     image: "/staff-librarian.png",
-    email: "r.chen@diplomaacademy.edu",
-    phone: "+1 (555) 123-4585",
+    email: "r.chen@wii.edu",
+    phone: "+880 123-4585",
     office: "Main Library, Room 100",
     hours: "Mon-Thu: 7:00 AM - 9:00 PM, Fri: 7:00 AM - 6:00 PM, Sat-Sun: 10:00 AM - 6:00 PM",
     responsibilities: "Library operations, research assistance, digital resources, study spaces",
@@ -84,8 +84,8 @@ const staff = [
     title: "Human Resources Manager",
     department: "Administration",
     image: "/staff-hr-manager.png",
-    email: "m.davis@diplomaacademy.edu",
-    phone: "+1 (555) 123-4586",
+    email: "m.davis@wii.edu",
+    phone: "+880 123-4586",
     office: "HR Department, Room 180",
     hours: "Mon-Fri: 8:30 AM - 5:00 PM",
     responsibilities: "Employee relations, recruitment, benefits administration, policy development",
@@ -96,8 +96,8 @@ const staff = [
     title: "Facilities Manager",
     department: "Operations",
     image: "/staff-facilities.png",
-    email: "t.johnson@diplomaacademy.edu",
-    phone: "+1 (555) 123-4587",
+    email: "t.johnson@wii.edu",
+    phone: "+880 123-4587",
     office: "Facilities Office, Room 050",
     hours: "Mon-Fri: 7:00 AM - 4:00 PM",
     responsibilities: "Building maintenance, security, campus safety, event setup",
@@ -108,8 +108,8 @@ const staff = [
     title: "Marketing Coordinator",
     department: "Communications",
     image: "/staff-marketing.png",
-    email: "l.park@diplomaacademy.edu",
-    phone: "+1 (555) 123-4588",
+    email: "l.park@wii.edu",
+    phone: "+880 123-4588",
     office: "Marketing Office, Room 250",
     hours: "Mon-Fri: 9:00 AM - 5:30 PM",
     responsibilities: "Social media, website content, promotional materials, event marketing",
@@ -120,8 +120,8 @@ const staff = [
     title: "Accounting Manager",
     department: "Financial Services",
     image: "/staff-accounting.png",
-    email: "k.brown@diplomaacademy.edu",
-    phone: "+1 (555) 123-4589",
+    email: "k.brown@wii.edu",
+    phone: "+880 123-4589",
     office: "Accounting Office, Room 160",
     hours: "Mon-Fri: 8:00 AM - 5:00 PM",
     responsibilities: "Budget management, financial reporting, accounts payable/receivable, payroll",
@@ -284,7 +284,7 @@ export default function StaffPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground mb-2">Main Reception</p>
-                  <p className="text-sm font-medium">+1 (555) 123-4567</p>
+                  <p className="text-sm font-medium">+880 123-4567</p>
                   <p className="text-xs text-muted-foreground">Mon-Fri: 8:00 AM - 6:00 PM</p>
                 </CardContent>
               </Card>
@@ -294,7 +294,7 @@ export default function StaffPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground mb-2">Academic Support</p>
-                  <p className="text-sm font-medium">+1 (555) 123-4584</p>
+                  <p className="text-sm font-medium">+880 123-4584</p>
                   <p className="text-xs text-muted-foreground">Mon-Fri: 8:00 AM - 5:30 PM</p>
                 </CardContent>
               </Card>
@@ -304,7 +304,7 @@ export default function StaffPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground mb-2">IT Help Desk</p>
-                  <p className="text-sm font-medium">+1 (555) 123-4583</p>
+                  <p className="text-sm font-medium">+880 123-4583</p>
                   <p className="text-xs text-muted-foreground">Mon-Fri: 7:30 AM - 6:00 PM</p>
                 </CardContent>
               </Card>
@@ -314,7 +314,7 @@ export default function StaffPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground mb-2">Campus Security</p>
-                  <p className="text-sm font-medium">+1 (555) 123-HELP</p>
+                  <p className="text-sm font-medium">+880 123-HELP</p>
                   <p className="text-xs text-muted-foreground">24/7 Available</p>
                 </CardContent>
               </Card>

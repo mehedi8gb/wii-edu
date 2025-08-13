@@ -5,121 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Mail, Phone, Award, BookOpen } from "lucide-react"
-
-const teachers = [
-  {
-    id: 1,
-    name: "Dr. Sarah Johnson",
-    title: "Head of Computer Science",
-    department: "Computer Science",
-    image: "/professional-woman-teacher.png",
-    email: "s.johnson@diplomaacademy.edu",
-    phone: "+1 (555) 123-4567",
-    experience: "15+ Years",
-    education: "Ph.D. Computer Science, MIT",
-    specialization: "Artificial Intelligence, Machine Learning",
-    bio: "Dr. Johnson is a renowned expert in AI and machine learning with extensive industry experience at leading tech companies. She has published over 50 research papers and leads several innovative projects.",
-    achievements: ["Best Faculty Award 2023", "AI Research Excellence", "Industry Partnership Leader"],
-  },
-  {
-    id: 2,
-    name: "Prof. Michael Chen",
-    title: "Senior Business Faculty",
-    department: "Business Administration",
-    image: "/professional-man-teacher.png",
-    email: "m.chen@diplomaacademy.edu",
-    phone: "+1 (555) 123-4568",
-    experience: "12+ Years",
-    education: "MBA Harvard Business School",
-    specialization: "Strategic Management, Entrepreneurship",
-    bio: "Prof. Chen brings real-world business expertise having founded two successful startups. He specializes in strategic management and helps students develop entrepreneurial mindsets.",
-    achievements: ["Entrepreneur of the Year 2022", "Outstanding Teaching Award", "Business Innovation Leader"],
-  },
-  {
-    id: 3,
-    name: "Dr. Emily Rodriguez",
-    title: "Healthcare Department Head",
-    department: "Healthcare",
-    image: "/professional-woman-doctor.png",
-    email: "e.rodriguez@diplomaacademy.edu",
-    phone: "+1 (555) 123-4570",
-    experience: "18+ Years",
-    education: "M.D. Johns Hopkins, MPH Harvard",
-    specialization: "Public Health, Healthcare Administration",
-    bio: "Dr. Rodriguez combines clinical experience with healthcare administration expertise. She has worked in major hospitals and healthcare systems, bringing practical insights to the classroom.",
-    achievements: ["Healthcare Excellence Award", "Community Service Recognition", "Medical Education Leader"],
-  },
-  {
-    id: 4,
-    name: "Prof. David Kim",
-    title: "Engineering Faculty Lead",
-    department: "Engineering",
-    image: "/professional-engineer.png",
-    email: "d.kim@diplomaacademy.edu",
-    phone: "+1 (555) 123-4569",
-    experience: "20+ Years",
-    education: "Ph.D. Mechanical Engineering, Stanford",
-    specialization: "Sustainable Engineering, Design Innovation",
-    bio: "Prof. Kim is a leading expert in sustainable engineering practices with numerous patents in green technology. He leads industry partnerships and research initiatives.",
-    achievements: ["Engineering Innovation Award", "Sustainability Champion", "Patent Holder (15+ Patents)"],
-  },
-  {
-    id: 5,
-    name: "Ms. Lisa Thompson",
-    title: "Arts & Design Coordinator",
-    department: "Arts & Design",
-    image: "/creative-arts-teacher.png",
-    email: "l.thompson@diplomaacademy.edu",
-    phone: "+1 (555) 123-4571",
-    experience: "10+ Years",
-    education: "MFA Visual Arts, RISD",
-    specialization: "Digital Design, Visual Communication",
-    bio: "Ms. Thompson is an accomplished designer with work featured in major publications. She bridges traditional art techniques with modern digital design practices.",
-    achievements: ["Design Excellence Award", "Student Favorite Teacher", "Creative Industry Recognition"],
-  },
-  {
-    id: 6,
-    name: "Dr. James Wilson",
-    title: "Education Department Head",
-    department: "Education",
-    image: "/education-professor.png",
-    email: "j.wilson@diplomaacademy.edu",
-    phone: "+1 (555) 123-4572",
-    experience: "16+ Years",
-    education: "Ed.D. Educational Leadership, Columbia",
-    specialization: "Curriculum Development, Educational Psychology",
-    bio: "Dr. Wilson has extensive experience in educational leadership and curriculum design. He has worked with school districts nationwide to improve educational outcomes.",
-    achievements: ["Educational Leadership Award", "Curriculum Innovation Recognition", "Teacher Training Expert"],
-  },
-  {
-    id: 7,
-    name: "Prof. Maria Garcia",
-    title: "Computer Science Faculty",
-    department: "Computer Science",
-    image: "/tech-professor-woman.png",
-    email: "m.garcia@diplomaacademy.edu",
-    phone: "+1 (555) 123-4573",
-    experience: "8+ Years",
-    education: "M.S. Software Engineering, Carnegie Mellon",
-    specialization: "Web Development, Database Systems",
-    bio: "Prof. Garcia specializes in modern web technologies and database systems. She has developed several popular online courses and maintains active industry connections.",
-    achievements: ["Rising Star Faculty", "Technology Innovation Award", "Student Mentorship Excellence"],
-  },
-  {
-    id: 8,
-    name: "Dr. Robert Taylor",
-    title: "Business Faculty",
-    department: "Business Administration",
-    image: "/business-professor.png",
-    email: "r.taylor@diplomaacademy.edu",
-    phone: "+1 (555) 123-4574",
-    experience: "14+ Years",
-    education: "Ph.D. Finance, Wharton",
-    specialization: "Financial Management, Investment Analysis",
-    bio: "Dr. Taylor brings Wall Street experience to the classroom, having worked as an investment analyst before transitioning to academia. He makes complex financial concepts accessible to students.",
-    achievements: ["Finance Faculty Excellence", "Industry Connection Award", "Research Publication Leader"],
-  },
-]
+import {teachers} from "@/data/teachers";
 
 const departments = [
   "All",
@@ -140,7 +26,7 @@ export default function TeachersPage() {
         <section className="bg-primary text-primary-foreground py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Our Faculty</h1>
+              <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Our Teacher</h1>
               <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
                 Meet our distinguished faculty members who bring expertise, passion, and real-world experience to guide
                 your educational journey
@@ -149,13 +35,13 @@ export default function TeachersPage() {
           </div>
         </section>
 
-        {/* Faculty Stats */}
+        {/* Teacher Stats */}
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-primary mb-2">150+</div>
-                <div className="text-muted-foreground">Expert Faculty</div>
+                <div className="text-muted-foreground">Expert Teacher</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-primary mb-2">85%</div>
@@ -163,7 +49,7 @@ export default function TeachersPage() {
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-primary mb-2">12:1</div>
-                <div className="text-muted-foreground">Student-Faculty Ratio</div>
+                <div className="text-muted-foreground">Student-Teacher Ratio</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-primary mb-2">25+</div>
@@ -173,7 +59,7 @@ export default function TeachersPage() {
           </div>
         </section>
 
-        {/* Faculty Directory */}
+        {/* Teacher Directory */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <Tabs defaultValue="All" className="w-full">
@@ -273,7 +159,7 @@ export default function TeachersPage() {
                   size="lg"
                   className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
                 >
-                  <a href="/contact">Contact Faculty</a>
+                  <a href="/contact">Contact Teacher</a>
                 </Button>
               </div>
             </div>

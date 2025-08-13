@@ -45,7 +45,7 @@ export default function UsersPage() {
     const mockUsers: User[] = [
       {
         id: "1",
-        name: "John Admin",
+        name: "Saiful Admin",
         email: "admin@wii.edu.bd",
         phone: "+880-1234-567890",
         role: "admin",

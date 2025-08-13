@@ -99,7 +99,7 @@ export default function DashboardPage() {
       },
       {
         id: "2",
-        expense: "Faculty Salaries",
+        expense: "Teacher Salaries",
         amount: 25000,
         date: "2024-08-01",
         category: "Payroll",
@@ -229,7 +229,7 @@ export default function DashboardPage() {
               <div className="flex items-center space-x-4 p-3 bg-green-50 rounded-lg">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <div className="flex-1">
-                  <p className="font-medium text-gray-900">Faculty Meeting</p>
+                  <p className="font-medium text-gray-900">Teacher Meeting</p>
                   <p className="text-sm text-gray-600">August 18, 2024 - 2:00 PM</p>
                 </div>
               </div>

@@ -20,7 +20,7 @@ export default function SettingsPage() {
   })
 
   const [profile, setProfile] = useState({
-    name: "John Admin",
+    name: "Saiful Admin",
     email: "admin@wii.edu.bd",
     phone: "+880-1234-567890",
     role: "admin",

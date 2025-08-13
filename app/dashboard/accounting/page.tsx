@@ -122,7 +122,7 @@ export default function AccountingPage() {
         id: "4",
         type: "expense",
         category: "Salary",
-        description: "Faculty Salary - January 2025",
+        description: "Teacher Salary - January 2025",
         amount: 180000,
         date: "2025-01-05",
         status: "completed",

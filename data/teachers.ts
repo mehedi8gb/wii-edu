@@ -1,0 +1,47 @@
+let image = "https://static.vecteezy.com/system/resources/previews/042/891/253/non_2x/professional-teacher-avatar-illustration-for-education-concept-vector.jpg"
+export const teachers = [
+    {
+        id: 1,
+        name: "Md. Shahid Miah",
+        title: "Head of CST Department",
+        department: "Computer Science & Technology",
+        image: image,
+        email: "shahid.miah@wii.edu",
+        phone: "01749706626",
+        experience: "15+ Years",
+        education: "B.Sc & M.Sc Computer Science, BUET",
+        specialization: "Programming, AI, Networking",
+        bio: "Md. Shahid Miah is a highly experienced faculty in Computer Science & Technology with expertise in programming, AI, and networking. He has guided numerous student projects and research initiatives.",
+        achievements: ["Best Instructor Award 2023", "AI Project Excellence", "Department Leadership Recognition"],
+    },
+    {
+        id: 2,
+        name: "Md. Abdur Rahman Jovair",
+        title: "Junior Instructor",
+        department: "Computer Science & Technology",
+        image: image,
+        email: "abdur.jovair@wii.edu",
+        phone: "01560064330",
+        experience: "5+ Years",
+        education: "B.Sc Computer Science, DU",
+        specialization: "Web Development, Database Systems",
+        bio: "Md. Abdur Rahman Jovair is a dedicated junior instructor focusing on web development and database systems. He actively supports students in practical projects and coding workshops.",
+        achievements: ["Rising Talent Award 2022", "Student Favorite Instructor", "Workshop Excellence Recognition"],
+    },
+    {
+        id: 3,
+        name: "Md. Tafsirul Islam Munshi",
+        title: "Junior Instructor",
+        department: "Computer Science & Technology",
+        image: image,
+        email: "tafsirul.munshi@wii.edu",
+        phone: "01991532710",
+        experience: "5+ Years",
+        education: "B.Sc Computer Science, DU",
+        specialization: "Software Engineering, Networking",
+        bio: "Md. Tafsirul Islam Munshi is a junior instructor with a focus on software engineering and networking. He contributes to curriculum development and helps students build strong coding foundations.",
+        achievements: ["Junior Instructor Excellence 2022", "Project Mentorship Recognition", "Software Workshop Leader"],
+    },
+];
+
+

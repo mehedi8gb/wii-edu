@@ -41,7 +41,7 @@ export function Footer() {
                 Departments
               </Link>
               <Link href="/teachers" className="text-sm hover:text-accent transition-colors">
-                Faculty
+                Teacher
               </Link>
               <Link href="/students" className="text-sm hover:text-accent transition-colors">
                 Student Life
@@ -77,15 +77,15 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-accent" />
-                <span className="text-sm">123 Education Street, Academic City, AC 12345</span>
+                <span className="text-sm">Rupshi Bus Stand, Rupganj, Narayanganj</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-accent" />
-                <span className="text-sm">+1 (555) 123-4567</span>
+                <span className="text-sm">+880 123-4567</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-accent" />
-                <span className="text-sm">info@diplomaacademy.edu</span>
+                <span className="text-sm">info@wii.edu</span>
               </div>
             </div>
             <div className="pt-2">
