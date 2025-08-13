@@ -15,7 +15,7 @@ export default function HomePage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-primary-foreground py-20 md:py-32">
-          <div className="absolute inset-0 bg-[url('/academic-building-campus.png')] bg-cover bg-center opacity-10"></div>
+          <div className="absolute inset-0 bg-[url('https://cherryblossomacademy.com/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-13-at-22.21.07_a0a5e3ca-e1755103116659.jpg')] bg-cover bg-center opacity-30"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <Badge className="mb-6 bg-accent text-accent-foreground text-sm px-4 py-2">
