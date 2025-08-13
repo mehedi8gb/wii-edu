@@ -16,8 +16,8 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Government-Certified Diploma Academy",
-  description: "Excellence in Education - Government-Certified Diploma Programs",
+  title: "Western Ideal Institute - Polytechnic Institute",
+  description: "Excellence in Technical Education - Western Ideal Institute, Narayanganj, Bangladesh",
   generator: "v0.app",
 }
 
