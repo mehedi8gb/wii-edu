@@ -124,18 +124,17 @@ export default function DashboardLayout({
               )
             })}
           </div>
+          <div className="mt-6">
+            <Button
+              onClick={handleLogout}
+              variant="outline"
+              className="flex items-center space-x-2 text-red-600 border-red-200 hover:bg-red-50 bg-transparent"
+            >
+              <LogOut className="w-4 h-4" />
+              <span>Logout</span>
+            </Button>
+          </div>
         </nav>
-
-        <div className="absolute bottom-4 left-4 right-4">
-          <Button
-            onClick={handleLogout}
-            variant="outline"
-            className="w-full flex items-center space-x-2 text-red-600 border-red-200 hover:bg-red-50 bg-transparent"
-          >
-            <LogOut className="w-4 h-4" />
-            <span>Logout</span>
-          </Button>
-        </div>
       </div>
 
       {/* Main Content */}
