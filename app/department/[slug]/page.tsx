@@ -1,6 +1,6 @@
 'use client';
 
-import { useRouter } from 'next/router';
+import {useParams} from 'next/navigation'; // App Router recommends this
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,8 +8,8 @@ import { Badge } from "@/components/ui/badge";
 import { useDepartmentStore } from "@/store/useDepartmentStore";
 
 export default function DepartmentPage() {
-    const router = useRouter();
-    const { slug } = router.query; // get slug from URL
+    const params = useParams();
+    const slug = params.slug as string; // get slug from URL
     const getDepartmentBySlug = useDepartmentStore((state) => state.getDepartmentBySlug);
     const department = slug ? getDepartmentBySlug(slug as string) : undefined;
 

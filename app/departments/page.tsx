@@ -83,7 +83,7 @@ export default function DepartmentsPage() {
                                             asChild
                                             className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
                                         >
-                                            <Link href={`/departments/${dept.slug}`}>Explore Program</Link>
+                                            <Link href={`/department/${dept.slug}`}>Explore Program</Link>
                                         </Button>
                                     </CardContent>
                                 </Card>
