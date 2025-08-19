@@ -1,16 +1,53 @@
 "use client"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 
 export default function StaffSettingsPage() {
   return (
     <div className="space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle>Settings (Staff)</CardTitle>
+          <CardTitle>Profile</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-gray-600">Manage your profile and preferences.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <Label className="text-sm text-gray-700">Full Name</Label>
+              <Input className="mt-1" defaultValue="Sam Staff" />
+            </div>
+            <div>
+              <Label className="text-sm text-gray-700">Email</Label>
+              <Input className="mt-1" type="email" defaultValue="staff@example.com" />
+            </div>
+            <div>
+              <Label className="text-sm text-gray-700">Department</Label>
+              <Input className="mt-1" defaultValue="Administration" />
+            </div>
+            <div>
+              <Label className="text-sm text-gray-700">Employee ID</Label>
+              <Input className="mt-1" defaultValue="EMP-3342" />
+            </div>
+          </div>
+          <div className="mt-4">
+            <Button>Save</Button>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Notifications</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-3 text-sm">
+            <label className="flex items-center gap-3"><input type="checkbox" defaultChecked className="accent-purple-600" /> Department updates</label>
+            <label className="flex items-center gap-3"><input type="checkbox" defaultChecked className="accent-purple-600" /> Event reminders</label>
+            <label className="flex items-center gap-3"><input type="checkbox" className="accent-purple-600" /> System alerts</label>
+          </div>
+          <div className="mt-4"><Button>Save Preferences</Button></div>
         </CardContent>
       </Card>
     </div>
