@@ -53,8 +53,12 @@ export default function LoginPage() {
       }),
     )
 
-    // Redirect to dashboard
-    router.push("/dashboard")
+    // Redirect based on role to ensure separation of student portal and admin/staff dashboard
+    if (formData.role === "student") {
+      router.push("/student")
+    } else {
+      router.push("/dashboard")
+    }
   }
 
   return (
