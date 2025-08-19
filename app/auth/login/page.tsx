@@ -25,6 +25,7 @@ export default function LoginPage() {
   const demoAccounts = [
     { role: "admin", email: "admin@example.com", password: "password123", label: "Admin Account" },
     { role: "teacher", email: "teacher@example.com", password: "password123", label: "Teacher Account" },
+    { role: "staff", email: "staff@example.com", password: "password123", label: "Staff Account" },
     { role: "student", email: "student@example.com", password: "password123", label: "Student Account" },
   ]
 
@@ -49,15 +50,27 @@ export default function LoginPage() {
       JSON.stringify({
         email: formData.email,
         role: formData.role,
-        name: formData.role === "admin" ? "Saiful Admin" : formData.role === "teacher" ? "Sarah Teacher" : "Mike Student",
+        name: formData.role === "admin" ? "Saiful Admin" : formData.role === "teacher" ? "Sarah Teacher" : formData.role === "staff" ? "Sam Staff" : "Mike Student",
       }),
     )
 
-    // Redirect based on role to ensure separation of student portal and admin/staff dashboard
-    if (formData.role === "student") {
-      router.push("/student")
-    } else {
-      router.push("/dashboard")
+    // Redirect to role-specific dashboards
+    switch (formData.role) {
+      case "student":
+        router.push("/dashboard/student")
+        break
+      case "admin":
+        router.push("/dashboard/admin")
+        break
+      case "teacher":
+        router.push("/dashboard/teacher")
+        break
+      case "staff":
+        router.push("/dashboard/staff")
+        break
+      default:
+        router.push("/dashboard")
+        break
     }
   }
 
@@ -124,6 +137,7 @@ export default function LoginPage() {
                   <SelectContent>
                     <SelectItem value="admin">Admin</SelectItem>
                     <SelectItem value="teacher">Teacher</SelectItem>
+                    <SelectItem value="staff">Staff</SelectItem>
                     <SelectItem value="student">Student</SelectItem>
                   </SelectContent>
                 </Select>
