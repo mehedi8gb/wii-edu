@@ -1,8 +1,10 @@
+"use client"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Award, Users, Globe, Target, Eye, Heart } from "lucide-react"
+import {useThemeStore} from "@/store/useThemeStore";
 
 const leadership = [
   {
@@ -81,12 +83,13 @@ const milestones = [
 ]
 
 export default function AboutPage() {
+    const { mainGradient } = useThemeStore(); // Get dynamic theme gradient
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-primary text-primary-foreground py-16 md:py-24">
+        <section className={`${mainGradient} text-white py-20`}>
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">About Our Academy</h1>

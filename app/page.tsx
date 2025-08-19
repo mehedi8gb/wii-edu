@@ -1,3 +1,4 @@
+"use client"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -7,8 +8,10 @@ import Link from "next/link"
 import { Users, BookOpen, Award, Calendar, Star, TrendingUp, Clock, CheckCircle } from "lucide-react"
 import {departments} from "@/data/departments";
 import {teachers} from "@/data/teachers";
+import {useThemeStore} from "@/store/useThemeStore";
 
 export default function HomePage() {
+    const { mainGradient } = useThemeStore(); // Get dynamic theme gradient
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -259,9 +262,9 @@ export default function HomePage() {
         </section>
 
         {/* Quick Actions */}
-        <section className="py-20">
+          <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="bg-primary text-primary-foreground rounded-2xl p-8 md:p-12">
+            <div className={`${mainGradient} text-white py-20 rounded-2xl p-8 md:p-12`}>
               <div className="text-center mb-12">
                 <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Journey?</h2>
                 <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">

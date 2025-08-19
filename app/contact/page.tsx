@@ -1,3 +1,4 @@
+"use client"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -7,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { MapPin, Phone, Mail, Clock, MessageSquare, Users, GraduationCap } from "lucide-react"
+import {useThemeStore} from "@/store/useThemeStore";
 
 const contactInfo = [
   {
@@ -46,12 +48,13 @@ const departments = [
 ]
 
 export default function ContactPage() {
+    const { mainGradient } = useThemeStore(); // Get dynamic theme gradient
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-primary text-primary-foreground py-16 md:py-24">
+          <section className={`${mainGradient} text-white py-20`}>
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
@@ -242,7 +245,7 @@ export default function ContactPage() {
         </section>
 
         {/* Emergency Contact */}
-        <section className="py-16 bg-primary text-primary-foreground">
+          <section className={`${mainGradient} text-white py-20`}>
           <div className="container mx-auto px-4">
             <div className="text-center">
               <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4">Emergency Contact</h2>

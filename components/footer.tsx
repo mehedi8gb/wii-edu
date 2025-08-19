@@ -1,9 +1,12 @@
+'use client';
 import Link from "next/link"
 import { GraduationCap, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import {useThemeStore} from "@/store/useThemeStore";
 
 export function Footer() {
+    const { mainGradient } = useThemeStore();
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className={`${mainGradient} text-white`}>
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Academy Info */}
