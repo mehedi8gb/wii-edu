@@ -1,9 +1,12 @@
+'use client'
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Search, X } from "lucide-react"
+import { useState } from "react"
 import { Mail, Phone, Award, BookOpen } from "lucide-react"
 import {teachers} from "@/data/teachers";
 
@@ -18,6 +21,8 @@ const departments = [
 ]
 
 export default function TeachersPage() {
+  const [search, setSearch] = useState("");
+  const [isSearchVisible, setIsSearchVisible] = useState(false);
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -63,22 +68,81 @@ export default function TeachersPage() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <Tabs defaultValue="All" className="w-full">
-              <div className="flex justify-center mb-12">
-                <TabsList className="grid w-full max-w-4xl grid-cols-3 lg:grid-cols-7">
-                  {departments.map((dept) => (
-                    <TabsTrigger key={dept} value={dept} className="text-xs lg:text-sm">
-                      {dept === "Business Administration" ? "Business" : dept === "Arts & Design" ? "Arts" : dept}
-                    </TabsTrigger>
-                  ))}
-                </TabsList>
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12 gap-6">
+                {/* Desktop: Tabs and Search Icon/Bar */}
+                <div className="hidden md:flex w-full items-center">
+                  <div className="flex-1 flex justify-center">
+                    <TabsList className="grid w-max grid-flow-col gap-4">
+                      {departments.map((dept) => (
+                        <TabsTrigger key={dept} value={dept} className="text-xs lg:text-sm">
+                          {dept === "Business Administration" ? "Business" : dept === "Arts & Design" ? "Arts" : dept}
+                        </TabsTrigger>
+                      ))}
+                    </TabsList>
+                  </div>
+                  <div className="flex items-center justify-end" style={{minWidth: 0}}>
+                    {isSearchVisible ? (
+                      <div className="w-full max-w-xs flex items-center bg-background rounded-full shadow-sm border border-border px-4 py-2 transition-all duration-300 animate-in fade-in-0 slide-in-from-left-4">
+                        <Search className="w-5 h-5 text-muted-foreground" />
+                        <input
+                          type="text"
+                          placeholder="Search..."
+                          value={search}
+                          onChange={e => setSearch(e.target.value)}
+                          className="w-full bg-transparent outline-none ml-3 text-base text-foreground placeholder:text-muted-foreground"
+                          autoFocus
+                        />
+                        <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full"
+                          onClick={() => setIsSearchVisible(false)}>
+                          <X className="h-5 w-5" />
+                        </Button>
+                      </div>
+                    ) : (
+                      <Button variant="ghost" size="icon" className="rounded-full"
+                        onClick={() => setIsSearchVisible(true)}>
+                        <Search className="h-5 w-5" />
+                      </Button>
+                    )}
+                  </div>
+                </div>
+
+                {/* Mobile: Tabs and Search Bar are separate */}
+                <div className="md:hidden">
+                  <div className="w-full overflow-x-auto pb-4">
+                    <TabsList className="grid w-max grid-flow-col gap-4">
+                      {departments.map((dept) => (
+                        <TabsTrigger key={dept} value={dept} className="text-xs lg:text-sm">
+                          {dept === "Business Administration" ? "Business" : dept === "Arts & Design" ? "Arts" : dept}
+                        </TabsTrigger>
+                      ))}
+                    </TabsList>
+                  </div>
+                  <div className="w-full flex items-center bg-background rounded-full shadow-sm border border-border px-4 py-2 mt-4">
+                    <Search className="w-5 h-5 text-muted-foreground" />
+                    <input
+                      type="text"
+                      placeholder="Search teachers..."
+                      value={search}
+                      onChange={e => setSearch(e.target.value)}
+                      className="w-full bg-transparent outline-none ml-3 text-base text-foreground placeholder:text-muted-foreground"
+                    />
+                  </div>
+                </div>
               </div>
 
-              {departments.map((department) => (
-                <TabsContent key={department} value={department}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {teachers
-                      .filter((teacher) => department === "All" || teacher.department === department)
-                      .map((teacher) => (
+              {departments.map((department) => {
+                const filtered = teachers
+                  .filter((teacher) => department === "All" || teacher.department === department)
+                  .filter((teacher) =>
+                    teacher.name.toLowerCase().includes(search.toLowerCase()) ||
+                    teacher.title.toLowerCase().includes(search.toLowerCase()) ||
+                    teacher.department.toLowerCase().includes(search.toLowerCase()) ||
+                    (teacher.specialization && teacher.specialization.toLowerCase().includes(search.toLowerCase()))
+                  );
+                return (
+                  <TabsContent key={department} value={department}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                      {filtered.length > 0 ? filtered.map((teacher) => (
                         <Card key={teacher.id} className="group hover:shadow-xl transition-all duration-300">
                           <CardHeader className="text-center">
                             <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
@@ -133,10 +197,15 @@ export default function TeachersPage() {
                             </div>
                           </CardContent>
                         </Card>
-                      ))}
-                  </div>
-                </TabsContent>
-              ))}
+                      )) : (
+                        <div className="col-span-full text-center text-muted-foreground py-16 text-lg">
+                          No teachers found. Try adjusting your search or filters.
+                        </div>
+                      )}
+                    </div>
+                  </TabsContent>
+                );
+              })}
             </Tabs>
           </div>
         </section>

@@ -1,6 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { students } from "@/data/students"
+import { teachers } from "@/data/teachers"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -40,8 +42,8 @@ interface ExpenseRecord {
 
 export default function DashboardPage() {
   const [stats, setStats] = useState<DashboardStats>({
-    students: 1247,
-    teachers: 89,
+    students: students.length,
+    teachers: teachers.length,
     parents: 1156,
     staff: 45,
     attendance: 1089,
@@ -161,7 +163,7 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        {/* <Card>
           <CardContent className="p-6">
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
@@ -174,7 +176,7 @@ export default function DashboardPage() {
               </div>
             </div>
           </CardContent>
-        </Card>
+        </Card> */}
 
         <Card>
           <CardContent className="p-6">
